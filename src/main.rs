@@ -1,38 +1,32 @@
 use dioxus::prelude::*;
 
-const FAVICON: Asset = asset!("/assets/favicon.ico");
-const MAIN_CSS: Asset = asset!("/assets/main.css");
-const HEADER_SVG: Asset = asset!("/assets/header.svg");
+use crate::intro::Intro;
+
+pub mod intro;
+pub mod post;
+
+const FAVICON: Asset = asset!("/assets/favicon.png");
 const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
 
 fn main() {
     dioxus::launch(App);
 }
 
-#[component]
-fn App() -> Element {
-    rsx! {
-        document::Link { rel: "icon", href: FAVICON }
-        document::Link { rel: "stylesheet", href: MAIN_CSS } document::Link { rel: "stylesheet", href: TAILWIND_CSS }
-        Hero {}
-
-    }
+#[derive(Routable, Clone)]
+#[rustfmt::skip]
+enum Route {
+    #[route("/")]
+    Intro {},
 }
 
 #[component]
-pub fn Hero() -> Element {
+fn App() -> Element {
     rsx! {
-        div {
-            id: "hero",
-            img { src: HEADER_SVG, id: "header" }
-            div { id: "links",
-                a { href: "https://dioxuslabs.com/learn/0.6/", "📚 Learn Dioxus" }
-                a { href: "https://dioxuslabs.com/awesome", "🚀 Awesome Dioxus" }
-                a { href: "https://github.com/dioxus-community/", "📡 Community Libraries" }
-                a { href: "https://github.com/DioxusLabs/sdk", "⚙️ Dioxus Development Kit" }
-                a { href: "https://marketplace.visualstudio.com/items?itemName=DioxusLabs.dioxus", "💫 VSCode Extension" }
-                a { href: "https://discord.gg/XgGxMSkvUM", "👋 Community Discord" }
-            }
-        }
+        document::Link { class: "rounded", rel: "icon", href: FAVICON }
+        document::Link { rel: "stylesheet", href: TAILWIND_CSS }
+        document::Link { rel: "preconnect", href: "https://fonts.googleapis.com" }
+        document::Link { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" }
+        document::Title { "morphqdd's blog post" }
+        Router::<Route> {}
     }
 }
