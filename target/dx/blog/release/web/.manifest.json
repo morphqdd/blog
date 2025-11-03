@@ -1,0 +1,74 @@
+{
+  "cli_version": "0.7.0 (2ab9a55)",
+  "rust_version": "rustc 1.91.0 (f8297e351 2025-10-28)",
+  "assets": {
+    "assets": {
+      "/home/morphe/projects/blog/assets/favicon.ico": [
+        {
+          "absolute_source_path": "/home/morphe/projects/blog/assets/favicon.ico",
+          "bundled_path": "favicon-dxh415063aecb8f5a9c.ico",
+          "options": {
+            "add_hash": true,
+            "variant": "Unknown"
+          }
+        }
+      ],
+      "/home/morphe/projects/blog/assets/header.svg": [
+        {
+          "absolute_source_path": "/home/morphe/projects/blog/assets/header.svg",
+          "bundled_path": "header-dxh925e2e367eea8a38.svg",
+          "options": {
+            "add_hash": true,
+            "variant": "Unknown"
+          }
+        }
+      ],
+      "/home/morphe/projects/blog/assets/main.css": [
+        {
+          "absolute_source_path": "/home/morphe/projects/blog/assets/main.css",
+          "bundled_path": "main-dxh61fb9789d9468b5.css",
+          "options": {
+            "add_hash": true,
+            "variant": "Unknown"
+          }
+        }
+      ],
+      "/home/morphe/projects/blog/assets/tailwind.css": [
+        {
+          "absolute_source_path": "/home/morphe/projects/blog/assets/tailwind.css",
+          "bundled_path": "tailwind-dxh35717024771909b.css",
+          "options": {
+            "add_hash": true,
+            "variant": "Unknown"
+          }
+        }
+      ],
+      "/home/morphe/projects/blog/target/dx/blog/release/web/public/wasm/blog.js": [
+        {
+          "absolute_source_path": "/home/morphe/projects/blog/target/dx/blog/release/web/public/wasm/blog.js",
+          "bundled_path": "blog-dxh2879704044b191db.js",
+          "options": {
+            "add_hash": true,
+            "variant": {
+              "Js": {
+                "minify": true,
+                "preload": true,
+                "static_head": false
+              }
+            }
+          }
+        }
+      ],
+      "/home/morphe/projects/blog/target/dx/blog/release/web/public/wasm/blog_bg.wasm": [
+        {
+          "absolute_source_path": "/home/morphe/projects/blog/target/dx/blog/release/web/public/wasm/blog_bg.wasm",
+          "bundled_path": "blog_bg-dxhe6c6f95378df61e.wasm",
+          "options": {
+            "add_hash": true,
+            "variant": "Unknown"
+          }
+        }
+      ]
+    }
+  }
+}
