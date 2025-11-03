@@ -28,7 +28,7 @@ jobs:
         run: cargo binstall dioxus-cli
 
       - name: Build release for web
-        run: dx build --release --web
+        run: dx build --release --web --base-path /blog/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
