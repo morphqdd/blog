@@ -13,7 +13,7 @@ pub fn Post(props: PostProps) -> Element {
         div {
             class: "p-5",
             h2 {
-                class: "text-[48px] font-bold p-4",
+                class: "text-[32px] md:text-[48px] font-bold p-4",
                 "{props.title}"
             }
             Markdown { src: props.src }

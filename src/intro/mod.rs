@@ -11,7 +11,7 @@ const POSTS: &[(&str, &str)] = &[(
 pub fn Intro() -> Element {
     rsx! {
         div {
-            class: "w-full h-screen flex justify-center p-20",
+            class: "w-full h-screen flex justify-center p-5 md:p-10",
             div {
                 class: "max-w-[40rem]",
                 nav {
