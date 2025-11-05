@@ -2,10 +2,16 @@ use dioxus::{core::Element, prelude::*};
 
 use crate::post::Post;
 
-const POSTS: &[(&str, &str)] = &[(
-    "The First One",
-    include_str!("../../posts/the-first-one.md"),
-)];
+const POSTS: &[(&str, &str)] = &[
+    (
+        "The First One",
+        include_str!("../../posts/the-first-one.md"),
+    ),
+    (
+        "You should try Nix",
+        include_str!("../../posts/you-should-try-nix.md"),
+    ),
+];
 
 #[component]
 pub fn Intro() -> Element {
@@ -21,7 +27,7 @@ pub fn Intro() -> Element {
                         li { a { href: "/", "home"} }
                     }
                 }
-                for (title, src) in POSTS {
+                for (title, src) in POSTS.iter().rev() {
                     Post { title,  src }
                 }
                 // h1 {
